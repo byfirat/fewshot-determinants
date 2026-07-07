@@ -10,14 +10,14 @@ The project investigates how few-shot cross-domain sentiment classification perf
 
 A DOI can be assigned to this repository through a research archive such as Zenodo. After the DOI is issued, replace the placeholder below with the final DOI.
 
-**Repository DOI:** `10.5281/zenodo.XXXXXXX`
+**Repository DOI:** `10.5281/zenodo.21236009`
 
 ## Citation
 
 If you use this repository, please cite it as:
 
 ```text
-Kapar, F. (2026). Few-shot Determinants: Code and outputs for few-shot cross-domain sentiment classification experiments [Software and data]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+Kapar, F. (2026). Few-shot Determinants: Code and outputs for few-shot cross-domain sentiment classification experiments [Software and data]. Zenodo. https://doi.org/10.5281/zenodo.21236009
 ```
 
 BibTeX:
@@ -28,8 +28,8 @@ BibTeX:
   title        = {Few-shot Determinants: Code and outputs for few-shot cross-domain sentiment classification experiments},
   year         = {2026},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+  doi          = {10.5281/zenodo.21236009},
+  url          = {https://doi.org/10.5281/zenodo.21236009}
 }
 ```
 
