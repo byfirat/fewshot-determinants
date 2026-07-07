@@ -1,0 +1,20 @@
+experiment_name: roberta_transfer_matrix_shots
+
+data:
+  processed_csv: data/processed/amazon_multidomain_sentiment_rawtext.csv
+  shots_per_class_list: [4, 8, 16]
+
+model:
+  hf_name: roberta-base
+  max_length: 256
+
+training:
+  num_train_epochs: 3
+  learning_rate: 0.00002
+  train_batch_size: 8
+  eval_batch_size: 16
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+
+output:
+  save_dir: outputs/runs

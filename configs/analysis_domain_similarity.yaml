@@ -1,0 +1,19 @@
+analysis_name: domain_similarity_analysis
+
+data:
+  processed_csv: data/processed/amazon_multidomain_sentiment_rawtext.csv
+  split_for_similarity: train
+
+inputs:
+  grouped_results:
+    bow_tfidf_logreg: outputs/runs/20260422_230251_bow_repeats_shots/grouped_results.csv
+    distilbert: outputs/runs/20260423_155145_distilbert_transfer_matrix_shots/grouped_results.csv
+    roberta_base: outputs/runs/20260423_232310_roberta_transfer_matrix_shots/grouped_results.csv
+
+similarity:
+  tfidf_max_features: 20000
+  token_top_k: 5000
+  min_token_length: 2
+
+output:
+  save_dir: outputs/analyses

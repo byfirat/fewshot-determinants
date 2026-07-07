@@ -1,0 +1,7 @@
+project_name: fewshot-determinants
+seed: 42
+default_device: auto
+paths:
+  data_dir: data
+  outputs_dir: outputs
+  reports_dir: reports

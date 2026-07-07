@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: fewshot-determinants
+Version: 0.1.0
+Summary: Reproducible experiments for a comparative study on few-shot performance determinants
+Author: Firat KAPAR
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Few-shot Determinants
+
+This repository contains the experiment code for a comparative study on the determinants of few-shot performance in text classification.
+
+## Main question
+What determines few-shot performance the most?
+- pretraining strength
+- source-target domain proximity
+- method stability across domains
+
+## Project goals
+- build a reproducible Python experiment pipeline
+- run local smoke tests on PC
+- move final large-scale experiments to Kaggle with minimal changes
+- save all outputs in a structured and reusable format
+
+## Quick start
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+python scripts/00_check_env.py
+python scripts/01_smoke_run.py
+python scripts/02_build_toy_data_layer.py
+python scripts/03_preview_fewshot_sampling.py
+```
+
+## Repository structure
+- `configs/`: YAML configuration files
+- `data/`: raw, interim, and processed data
+- `outputs/runs/`: run-level outputs
+- `reports/`: generated tables and figures
+- `scripts/`: entry-point scripts
+- `src/fewshot_determinants/`: core package
+
+## Portability
+The project is designed to run locally and on Kaggle with minimal path changes.
+
+
+## Next real-data steps
+```bash
+python scripts/04_inspect_hf_multidomain_source.py
+python scripts/05_prepare_hf_multidomain_dataset.py
+python scripts/06_dataset_summary.py
+python scripts/07_real_data_bow_baseline.py
+```

@@ -1,0 +1,23 @@
+experiment_name: distilbert_books_to_dvd_8shot
+
+data:
+  processed_csv: data/processed/amazon_multidomain_sentiment_rawtext.csv
+  source_domain: books
+  target_domain: dvd
+  shots_per_class: 8
+  seed: 42
+
+model:
+  hf_name: distilbert-base-uncased
+  max_length: 256
+
+training:
+  num_train_epochs: 3
+  learning_rate: 0.00002
+  train_batch_size: 16
+  eval_batch_size: 32
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+
+output:
+  save_dir: outputs/runs

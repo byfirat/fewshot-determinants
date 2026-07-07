@@ -1,0 +1,17 @@
+experiment_name: local-smoke-test
+task: sentiment_classification
+models:
+  - distilbert-base-uncased
+fewshot:
+  shots_per_class: [4, 8, 16]
+  n_repeats: 10
+training:
+  max_epochs: 1
+  batch_size: 8
+  learning_rate: 2.0e-5
+evaluation:
+  primary_metric: macro_f1
+  secondary_metrics:
+    - accuracy
+    - balanced_accuracy
+    - classwise_f1

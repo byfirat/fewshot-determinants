@@ -1,0 +1,23 @@
+source:
+  type: huggingface
+  dataset_name: JSSICE/Multi-Domain-Sentiment-Dataset
+  dataset_config: default
+  inspect_split: train
+  inspect_sample_size: 11
+
+preparation:
+  selected_domains:
+    - books
+    - dvd
+    - electronics
+    - kitchen & housewares
+  text_fields:
+    - title
+    - review_text
+  drop_neutral: true
+  negative_stars: [1, 2]
+  positive_stars: [4, 5]
+  max_train_per_domain: 3000
+  max_validation_per_domain: 500
+  max_test_per_domain: 1000
+  output_filename: amazon_multidomain_sentiment_rawtext.csv

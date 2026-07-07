@@ -1,0 +1,20 @@
+comparison_name: comparison_bow_vs_roberta
+
+inputs:
+  model_a_name: bow_tfidf_logreg
+  model_a_grouped_results_csv: outputs/runs/20260422_230251_bow_repeats_shots/grouped_results.csv
+
+  model_b_name: roberta_base
+  model_b_grouped_results_csv: outputs/runs/20260423_232310_roberta_transfer_matrix_shots/grouped_results.csv
+
+comparison:
+  metric_column: macro_f1_mean
+  shots_per_class_list: [4, 8, 16]
+
+bootstrap:
+  num_resamples: 10000
+  random_seed: 42
+  ci_level: 0.95
+
+output:
+  save_dir: outputs/comparisons
