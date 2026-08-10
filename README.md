@@ -77,10 +77,6 @@ The few-shot settings use class-balanced target-domain support sets with:
 configs/                         YAML configuration files
 data/                            Raw, interim, and processed data files
 docs/                            Project notes and structure documentation
-notebooks/                       Optional exploratory notebooks
-outputs/                         Raw experiment outputs and comparison outputs
-reports/figures/                 Final figures used in the manuscript
-reports/tables/                  Final tables used in the manuscript
 scripts/                         Entry-point scripts for experiments and analyses
 src/fewshot_determinants/        Core Python package
 tests/                           Basic tests
